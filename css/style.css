@@ -74,7 +74,8 @@ body {
     justify-content: space-between;
     align-items: center;
     height: initial;
-    width: 100%;
+    width: 850px;
+    gap: 28px;
   }
 }
 .l_header_nav_list {
@@ -83,6 +84,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0;
+  text-align: center;
 }
 @media screen and (min-width: 1080px) {
   .l_header_nav_list {
@@ -96,29 +98,6 @@ body {
   cursor: pointer;
   margin-top: 36px;
 }
-.l_header-nav_link {
-  color: var(--black-color);
-  width: 100%;
-  display: block;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  background: linear-gradient(transparent 0%, transparent 100%);
-}
-@media screen and (min-width: 1080px) {
-  .l_header-nav_link {
-    background: linear-gradient(
-      transparent 0%,
-      transparent 30%,
-      var(--main-color) 75%,
-      var(--main-color) 100%
-    );
-  }
-}
-.l_header-nav_link:hover {
-  border-bottom: 3px solid var(--white-color);
-}
-
 .l_header-nav {
   position: fixed;
   right: 0;
@@ -143,6 +122,71 @@ body {
     display: flex;
     justify-content: end;
     width: 50%;
+  }
+}
+.l_header-nav_span-jpn {
+  display: none;
+}
+.l_header-nav_span {
+  font-weight: bold;
+  font-size: 16px;
+}
+.l_header-nav_span:hover {
+  border-bottom: 3px solid var(--white-color);
+}
+@media screen and (min-width: 1080px) {
+  /* ボタン本体 */
+  .l_header-nav_link {
+    position: relative;
+    display: inline-block;
+    background-image: linear-gradient(
+      transparent 0%,
+      transparent 15%,
+      var(--main-color) 40%,
+      var(--main-color) 65%,
+      transparent 100%
+    );
+    /* 背景のグラデーション */
+    width: 110px; /* 横幅 */
+    height: 60px; /* 縦幅 */
+    line-height: 60px; /* 行の高さ(heightと同じ値にする) */
+    text-decoration: none; /* aタグのアンダーラインを消す */
+    overflow: hidden; /* はみ出し部分を隠す */
+    cursor: pointer; /* カーソルをポインターにする */
+  }
+
+  /* ボタンのテキスト */
+  .l_header-nav_span {
+    position: absolute;
+    left: 0;
+    display: block;
+    height: 100%; /* 縦幅をボタンと同じにする */
+    width: 100%; /* 横幅をボタンと同じにする */
+    color: var(--black-color); /* 文字色 */
+    font-size: 14px; /* 文字サイズ */
+    font-weight: bold; /* 文字の太さ */
+    text-align: center; /* テキストを中央揃え */
+    transition: all 0.3s; /* アニメーション実行時間 */
+  }
+
+  /* ボタンのテキスト(デフォルトのテキスト) */
+  .l_header-nav_span:nth-child(1) {
+    top: 0;
+    font-size: 20px;
+  }
+
+  /* ボタンのテキスト(隠れているテキスト) */
+  .l_header-nav_span:nth-child(2) {
+    top: -100%;
+  }
+
+  /* ボタンホバーアクション */
+  .l_header-nav_link:hover .l_header-nav_span:nth-child(1) {
+    top: 100%;
+  }
+
+  .l_header-nav_link:hover .l_header-nav_span:nth-child(2) {
+    top: 0;
   }
 }
 
