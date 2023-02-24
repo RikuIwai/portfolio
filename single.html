@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>RIKU's Portfolio</title>
+    <meta
+      name="description"
+      content="Web制作を行っている岩井陸の紹介ページになります。"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- fabicon -->
+    <link rel="icon" href="img/logo-pic.png" type="image/png" />
+    <!-- apple-touch-icon -->
+    <link rel="apple-touch-icon" href="img/logo-pic.png" />
+    <!-- ogp -->
+    <meta property="og:site_name" content="RIKU's Portfolio" />
+    <meta property="og:url" content="URL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RIKU's Portfolio" />
+    <meta
+      property="og:description"
+      content="Web制作を行っている岩井陸の紹介ページになります。"
+    />
+    <meta property="og:image" content="URL" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="fb:app_id" content="AppID" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@www_waiwai_com" />
+    <meta
+      name="twitter:description"
+      content="Web制作を行っている岩井陸の紹介ページになります。"
+    />
+    <meta name="twitter:image:src" content="URL" />
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <header class="l_header">
+    <div class="l_header-logo">
+      <a href="index.html"
+        ><img src="img/logo-pic.jpg" class="header_logo-pic"
+      /></a>
+    </div>
+    <nav class="l_header-nav" id="js-nav">
+      <ul class="l_header-nav_list l_header_nav_list">
+        <li class="l_header-nav_item">
+          <a
+            href="index.html#about"
+            class="l_header-nav_link l_header-nav_rotate"
+            ><span class="l_header-nav_span">ABOUT</span>
+            <span class="l_header-nav_span l_header-nav_span-jpn"
+              >私について</span
+            ></a
+          >
+        </li>
+        <li class="l_header-nav_item">
+          <a href="skill.html" class="l_header-nav_link l_header-nav_rotate"
+            ><span class="l_header-nav_span">SKILL</span>
+            <span class="l_header-nav_span l_header-nav_span-jpn"
+              >私にできること</span
+            ></a
+          >
+        </li>
+        <li class="l_header-nav_item">
+          <a href="work.html" class="l_header-nav_link l_header-nav_rotate"
+            ><span class="l_header-nav_span">WORK</span>
+            <span class="l_header-nav_span l_header-nav_span-jpn">実績</span></a
+          >
+        </li>
+        <li class="l_header-nav_item">
+          <a href="work.html" class="l_header-nav_link l_header-nav_rotate"
+            ><span class="l_header-nav_span">BLOG</span>
+            <span class="l_header-nav_span l_header-nav_span-jpn"
+              >日々の日記</span
+            ></a
+          >
+        </li>
+        <li class="l_header-nav_item">
+          <a href="qa.html" class="l_header-nav_link l_header-nav_rotate">
+            <span class="l_header-nav_span">Q&A</span>
+            <span class="l_header-nav_span l_header-nav_span-jpn"
+              >よくあるご質問</span
+            ></a
+          >
+        </li>
+        <li class="l_header-nav_item">
+          <a href="contact.html" class="l_header-nav_link l_header-nav_rotate"
+            ><span class="l_header-nav_span">CONTACT</span>
+            <span class="l_header-nav_span l_header-nav_span-jpn"
+              >お問い合わせ</span
+            ></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <button class="m_hamburger" id="js-hamburger">
+      <span class="m_hamburger-bar"></span>
+      <span class="m_hamburger-bar"></span>
+      <span class="m_hamburger-bar"></span>
+    </button>
+  </header>
+  <body>
+    <main class="l_main">
+      <section class="single_about">
+        <div class="l_contents">
+          <div class="l_container">
+            <article class="single_article">
+              <div class="single_article-wrap">
+                <h2 class="single_article-title">私たちのやり方で</h2>
+                <div class="single_article-img__pare">
+                  <img
+                    src="img/logo-pic.jpg"
+                    class="single_article-img"
+                    width="600"
+                    height="600"
+                  />
+                </div>
+                <p class="single_article-content">
+                  12行目から37行目がスライダー本体部分になります。
+                  15行目はWordPressのループを開始する際の、おきまりの記述です。
+                  （WP_Query
+                  に渡した条件の投稿が存在したら、その存在する投稿数分だけ while
+                  により処理を行う。というような意味です。）
+                  16行目~25行目までのdiv要素(.swiper-slide)が、1個ずつのスライドとして認識されます。
+                  17行目~24行目までがスライドの中身です。
+                  18~20行目までがアイキャッチ画像の取得部分。
+                  21~23行目は記事タイトルを表示させています。
+                  今回のデモではアイキャッチ画像、記事タイトルしか表示させていませんが、
+                  実際の案件では、投稿日、更新日、あとは記事の内容を
+                  冒頭何文字かだけ表示させるような仕組みにしても良いかと思います。
+                  また、最低限の見た目を整えるcssは、以下のような感じになります。
+                  もちろんこれはデモ用の簡素なコードですので、もっと細かく書けば、さらに良い感じの見た目になります。
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <footer class="l_footer">
+    <div class="l_footer-box">
+      <div class="l_footer-twitter">
+        <a href="" class="l_footer-twitter-link">
+          <img
+            src="img/twitter-social-media-icon-design-template-vector-png_127015-removebg-preview.png"
+            class="twitter-icon"
+        /></a>
+      </div>
+      <a href="contact.html" class="l_footer_link">相談する</a>
+    </div>
+    <div class="l_footer-copy">
+      <span class="l_footer-copy-p">&copy;RIKU IWAI's portfolio</span>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+</html>

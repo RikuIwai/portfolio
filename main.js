@@ -64,7 +64,7 @@ gsap.from(".js_top_about-career-detail", {
     start: "top top",
   },
   stagger: {
-    each: "0.6",
+    each: "0.3",
     from: "start",
   },
 });
@@ -119,4 +119,46 @@ faq.forEach((element) => {
       mark.classList.toggle("is-open");
     }
   });
+});
+
+// トップページの実績
+gsap.from(".top_work-item", {
+  duration: "1.5",
+  autoAlpha: "0",
+  y: "400",
+  scrollTrigger: {
+    trigger: ".top_work-list",
+    start: "top center",
+  },
+  stagger: {
+    each: "0.5",
+    from: "start",
+  },
+});
+
+let mySwiper = new Swiper(".swiper", {
+  // オプション設定
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+  // 以下のコードは省略可能
+  //ページネーション表示設定
+  pagination: {
+    el: ".swiper-pagination", //ページネーション要素
+    type: "bullets", //ページネーションの種類
+    clickable: true, //クリックに反応させる
+  },
+
+  //ナビゲーションボタン（矢印）表示の設定
+  navigation: {
+    nextEl: ".swiper-button-next", //「次へボタン」要素の指定
+    prevEl: ".swiper-button-prev", //「前へボタン」要素の指定
+  },
+
+  //スクロールバー表示の設定
+  scrollbar: {
+    el: ".swiper-scrollbar", //要素の指定
+  },
+  //ここまで省略可能
 });
